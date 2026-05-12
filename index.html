@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Noureen Saad - Software Engineer Portfolio. Explore my projects, skills, and experience in software development, testing, and mobile app development."
+    />
+    <meta
+      name="keywords"
+      content="Software Engineer, Portfolio, Flutter Developer, Quality Assurance, Web Development"
+    />
+    <meta name="author" content="Noureen Saad" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="jsdelivr.net"
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <title>Noureen's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="theme-toggle" onclick="toggleDarkMode()">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <div class="visitor-counter">
+      <span class="counter-label">VISITORS:</span>
+      <span class="counter-value" id="visitor-count">000000</span>
+    </div>
+
+    <div class="desktop">
+      <div class="icon-card">
+        <div class="icon" onclick="openWindow('about')">
+          <img src="icons/about.webp" alt="About" />
+          <p>About Me</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('education')">
+          <img src="icons/education.webp" alt="Education" />
+          <p>Education</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('experience')">
+          <img src="icons/experience.webp" alt="Experience" />
+          <p>Experience</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('projects')">
+          <img src="icons/projects.webp" alt="Projects" />
+          <p>Projects</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('skills')">
+          <img src="icons/skills.webp" alt="Skills" />
+          <p>Skills</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('certificates')">
+          <img src="icons/certificates.webp" alt="Certificates" />
+          <p>Certificates</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('activities')">
+          <img src="icons/activities.webp" alt="Activities" />
+          <p>Activities</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('contact')">
+          <img src="icons/contact.webp" alt="Contact" />
+          <p>Contact</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="about-window">
+      <div class="window-header">
+        <span>About Me</span>
+        <button class="close-btn" onclick="closeWindow('about')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+      <div class="window-content about-content">
+        <div class="about-photo">
+          <img src="assets/me.jpg" alt="My Photo" />
+        </div>
+        <div class="about-text">
+          <h1>Amr Essam</h1>
+          <h2>Computer Engineer</h2>
+          <!-- <h2>Computer Science Graduate</h2> -->
+
+          <div class="cv-section">
+            <a
+              href="assets/AmrEssam_AIEngineer.pdf"
+              target="_blank"
+              class="cv-download"
+              >View CV</a
+            >
+          </div>
+          <br />
+          <p style="padding: 0 40px">
+            Driven and Responsible Junior Computer Engineer, Application
+            Developer at IBM, ITI Graduate, specialized in Data Science and
+            Python Full Stack Development, Skilled in developing end-to-end
+            systems that integrate machine learning models and Generative AI
+            tools with scalable back-end and interactive front-end applications.
+          </p>
+          <br />
+          <!-- <p>
+          I've experience working with AI Agents, RAGs, LangChain, LangGraph, LLMs, Fast API, Vector databases, MLOps (MLflow), Git, Docker, CI/CD and several frameworks and technologies related to Full Stack development,
+          Starting from Backend development using: Django, Flask, REST APIs
+          To building modern Frontend websites using: React JS and HTML, CSS, Java Script.
+          And I'm also experienced working with different Databases; designing and using: Oracle, PostgreSQL and MySQL.
+          In addition to the Machine learning foundations including: Supervised, Unsupervised Learning, Deep Learning, NLP techniques.
+        </p> -->
+        </div>
+
+        <!-- <div class="leetcode-section">
+        <p class="leetcode-intro">Visit my problem solving zone ↓</p>
+        <a href="https://leetcode.com/3OWBLspDdX/" target="_blank" class="leetcode-link">LeetCode profile</a>
+      </div> -->
+      </div>
+    </div>
+
+    <div class="window" id="education-window">
+      <div class="window-header">
+        <span>Education</span>
+        <button class="close-btn" onclick="closeWindow('education')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+
+      <div class="window-content education-content">
+        <p><b>University:</b> Zagazig University</p>
+        <p><b>Faculty:</b> Faculty of Engineering</p>
+        <p><b>Major:</b> Computer and Systems Department</p>
+        <p><b>Graduation Year:</b> 2024</p>
+
+        <br />
+
+        <h3>Relevant Courses</h3>
+
+        <div class="courses-grid">
+          <div class="course">
+            <h4>Data Structures</h4>
+            <p>
+              Design and analysis of efficient algorithms and implementation of
+              key data structures.
+            </p>
+          </div>
+
+          <div class="course">
+            <h4>Software Engineering</h4>
+            <p>
+              Explored SDLC, requirements analysis, UML design, and testing
+              methodologies.
+            </p>
+          </div>
+
+          <div class="course">
+            <h4>Database Systems</h4>
+            <p>
+              Focused on SQL, normalization, and database design using
+              relational and NoSQL models.
+            </p>
+          </div>
+
+          <div class="course">
+            <h4>Artificial Intelligence</h4>
+            <p>
+              Studied AI algorithms, search methods, and problem-solving with
+              heuristic approaches.
+            </p>
+          </div>
+
+          <!-- <div class="course">
+          <h4>Operating Systems</h4>
+          <p>Learned process management, scheduling, and memory control through C-based labs.</p>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="experience-window">
+      <div class="window-header">
+        <span>Experience</span>
+        <button class="close-btn" onclick="closeWindow('experience')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+
+      <div class="window-content experience-content">
+        <div class="experience-item">
+          <h3>IBM - Application Developer Intern</h3>
+          <p><strong>Feb 2026 – Present</strong></p>
+          <p>
+            • Executed targeted campaigns using Salesforce Marketing Cloud
+            (SFMC) tools including Journey Builder, Automation Studio, and
+            Content Builder in a Marketing Operations Specialist (MOS) role.
+          </p>
+          <p>
+            • Built and optimized Data Extensions using SQL for advanced
+            segmentation, personalization, and campaign performance tracking
+            within SFMC.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <h3>
+            [Military Service] Armed Forces Engineering Authority - DB & Oracle
+            APEX Developer
+          </h3>
+          <p><strong>Dec 2024 – Jul 2025</strong></p>
+          <p>
+            • Designed and managed Oracle database systems to support
+            operational and business requirements.
+          </p>
+          <p>
+            • Developed and deployed modern web applications and dashboards
+            using Oracle APEX.
+          </p>
+          <p>
+            • Migrated and maintained critical Linux-based IT systems, including
+            domains, servers, and enterprise applications.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <h3>Ericsson - AI Trainee</h3>
+          <p><strong>Jun 2023 – Jul 2023</strong></p>
+          <p>
+            • Analyzed telecom datasets containing over 2 million records to
+            improve 4G network performance.
+          </p>
+          <p>
+            • Applied machine learning techniques for network optimization and
+            market insight generation.
+          </p>
+          <p>
+            • Created Power BI dashboards and presented analytical findings to
+            stakeholders.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <h3>NTI - AI Trainee</h3>
+          <p><strong>Jul 2023 – Aug 2023</strong></p>
+          <p>
+            • Participated in AI workshops, technical sessions, and
+            collaborative group projects.
+          </p>
+          <p>
+            • Strengthened practical knowledge of machine learning concepts and
+            data analysis workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="projects-window">
+      <div class="window-header">
+        <span>Projects</span>
+        <button class="close-btn" onclick="closeWindow('projects')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+      <div class="window-content projects-content">
+        <div class="project">
+          <h3 class="project-title">Walkie - Graduation Project</h3>
+          <p class="project-description">
+            • Contributed as part of the <b>Frontend Team</b> in a gamified
+            walking habit platform, building the mobile app interface using
+            Flutter for a responsive and engaging user experience. <br />•
+            Integrated <b>Google Maps APIs</b> to display smart walking routes
+            with green areas, low-traffic paths, and smooth terrains. <br />•
+            Collaborated with the backend team to consume
+            <b>REST APIs</b> through <b>Dio API integration</b> and ensure
+            smooth data flow between frontend and backend services using
+            <b>Cubit state management</b>.
+          </p>
+          <p class="project-tools">
+            <b>Tools:</b> Flutter, Dart, Google Maps API, REST APIs, Flask,
+            Python, GIT.
+          </p>
+          <a
+            class="project-link"
+            href="https://drive.google.com/drive/folders/1TlZuxNlCrq3qJB-o8O0E3E91oKELQuL-?usp=drive_link"
+            target="_blank"
+            ><br />View Demo Video</a
+          >
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-description">
+            • Designed and developed a retro OS-style interactive portfolio
+            using <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>, featuring
+            draggable windows and a desktop-like interface. <br />• Focused on
+            clean code structure, reusability, and aesthetic consistency using
+            pixel fonts and minimal UI animations.
+          </p>
+
+          <p class="project-tools">
+            <b>Tools:</b> HTML, CSS, Java Script, GIT.
+          </p>
+          <a
+            class="project-link"
+            href="https://github.com/NoureenSaad/noureen-portfolio"
+            target="_blank"
+            ><br />View on GitHub</a
+          >
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">Laravel Registration Form</h3>
+          <p class="project-description">
+            • Created and implemented a comprehensive
+            <b>user registration</b> form with robust client-side and
+            server-side validations. <br />• Applied
+            <b>Laravel’s multi-language</b> feature to support
+            <b>English</b> and <b>Arabic</b>, providing translation files and
+            enabling language switching. <br />• Utilized
+            <b>Laravel’s Blade</b> templating engine to create a master layout,
+            ensuring consistent headers and footers across web pages.
+          </p>
+
+          <p class="project-tools">
+            <b>Tools:</b> PHP, Laravel, MySQL, AJAX, Blade, Multi-Language, GIT.
+          </p>
+          <a
+            class="project-link"
+            href="http://github.com/NoureenSaad/FinalLaravel_App"
+            target="_blank"
+            ><br />View on GitHub</a
+          >
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">Filmora Application</h3>
+          <p class="project-description">
+            • Developed the <b>Browse Tab</b> feature in Filmora using
+            <b>clean architecture</b> and <b>MVVM</b> for scalability and
+            maintainability. <br />• Integrated <b>Dio API</b> for efficient
+            movie data retrieval and implemented <b>Watchlist</b> functionality
+            with <b>Bloc</b> for real-time UI updates. <br />• Secured user
+            access through <b>Firebase authentication</b> to enhance
+            personalized experiences.
+          </p>
+
+          <p class="project-tools">
+            <b>Tools:</b> Flutter, Dart, MVVM, Clean Architecture, GIT, REST
+            APIs.
+          </p>
+          <a
+            class="project-link"
+            href="https://github.com/NoureenSaad/Movies_App"
+            target="_blank"
+            ><br />View on GitHub</a
+          >
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">Saucelab Website Automation</h3>
+          <p class="project-description">
+            • Built automated test scripts with <b>Selenium WebDriver</b> and
+            <b>TestNG</b> using the <b>Page Object Model (POM)</b> to validate
+            login functionality. <br />• Implemented test cases for add-to-cart
+            and cart navigation, verifying user actions and redirected URLs.
+          </p>
+          <p class="project-tools">
+            <b>Tools:</b> Java, Selenium, TestNG, Allure Reporting, GIT.
+          </p>
+          <a
+            class="project-link"
+            href="https://github.com/NoureenSaad/saucelab-test-automation"
+            target="_blank"
+            ><br />View on GitHub</a
+          >
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">Student Affairs Website</h3>
+          <p class="project-description">
+            • Undertook the entire development lifecycle from <b>HTML</b> and
+            <b>CSS</b> design to <b>JavaScript</b> functionality for the
+            "Student Department". <br />• The "Student Department" page serves
+            as an interface for users to choose their department. It
+            incorporates validation, dynamic dropdowns, and user-friendly
+            features to ensure accurate and efficient data entry.
+          </p>
+          <p class="project-tools">
+            <b>Tools:</b> HTML, CSS, JavaScript, Python, Django, GIT.
+          </p>
+          <a
+            class="project-link"
+            href="https://github.com/NoureenSaad/Student-Affairs"
+            target="_blank"
+            ><br />View on GitHub</a
+          >
+        </div>
+
+        <div class="project">
+          <h3 class="project-title">Instapay System</h3>
+          <p class="project-description">
+            • Planned and applied a <b>robust bill management system</b> to
+            manage different bill types (electricity, gas, water). <br />•
+            Implemented payment handling to process <b>bill payments</b>,
+            ensuring payments are processed only if the user has sufficient
+            balance, and removing paid bills from the database. <br />•
+            Developed the system using <b>MVC architecture</b> with all the
+            views being in the Instapay main class and the different classes
+            represent the Model which interacts with the Model DB class.
+          </p>
+
+          <p class="project-tools">
+            <b>Tools:</b> Java, Spring Boot, SOLID, Design Patterns, GIT.
+          </p>
+          <a
+            class="project-link"
+            href="https://github.com/NoureenSaad/Instapay-System"
+            target="_blank"
+            ><br />View on GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="skills-window">
+      <div class="window-header">
+        <span>Skills</span>
+        <button class="close-btn" onclick="closeWindow('skills')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+
+      <div class="window-content skills-content">
+        <div class="skills-grid">
+          <div class="window-content skills-content">
+            <div class="skills-grid">
+              <div class="skills-section">
+                <h3>Programming Languages</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Python</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-javascript-plain colored"></i
+                    ><span>JavaScript</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-bash-plain colored"></i><span>Bash</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Machine Learning & AI</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>ML Algorithms</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-pytorch-original colored"></i
+                    ><span>PyTorch</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-tensorflow-original colored"></i
+                    ><span>Keras</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Transformers</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Hugging Face</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i><span>RAG</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>LangChain</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>LangGraph</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Data Science & NLP</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-pandas-original colored"></i
+                    ><span>Pandas</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-numpy-original colored"></i
+                    ><span>NumPy</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Statistics</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Probability</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Sentiment Analysis</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Tokenization</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>ChromaDB</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>Pinecone</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>MLOps & DevOps</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-docker-plain colored"></i
+                    ><span>Docker</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-jenkins-line colored"></i
+                    ><span>Jenkins</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-git-plain colored"></i><span>Git</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i
+                    ><span>MLflow</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-github-original colored"></i
+                    ><span>CI/CD</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Frontend Development</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-html5-plain colored"></i
+                    ><span>HTML5</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-bootstrap-plain colored"></i
+                    ><span>Bootstrap</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-react-original colored"></i
+                    ><span>React JS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Backend Development</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-flask-original colored"></i
+                    ><span>Flask</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-django-plain colored"></i
+                    ><span>Django</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-fastapi-plain colored"></i
+                    ><span>FastAPI</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-nodejs-plain colored"></i
+                    ><span>REST API</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Database & SQL</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-oracle-original colored"></i
+                    ><span>Oracle</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-mysql-plain colored"></i
+                    ><span>MySQL</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-postgresql-plain colored"></i
+                    ><span>PostgreSQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Computer Science Fundamentals</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-cplusplus-plain colored"></i
+                    ><span>OOP</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-cplusplus-plain colored"></i
+                    ><span>Algorithms</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-cplusplus-plain colored"></i
+                    ><span>Data Structures</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>OS & Networking</h3>
+                <div class="skills-icons">
+                  <div class="skill-item">
+                    <i class="devicon-linux-plain colored"></i
+                    ><span>Linux</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-redhat-plain colored"></i
+                    ><span>RedHat</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="devicon-networkx-original colored"></i
+                    ><span>Networking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="certificates-window">
+      <div class="window-header">
+        <span>Certificates</span>
+        <button class="close-btn" onclick="closeWindow('certificates')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+      <div class="window-content certificates-content">
+        <h2>My Certificates</h2>
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <img
+              src="icons/istqb.webp"
+              alt="ISTQB Logo"
+              class="certificate-logo"
+              style="padding: 8px"
+            />
+            <p class="certificate-title">
+              ISTQB® Certified Tester – Foundation Level
+            </p>
+            <a
+              href="https://scr.istqb.org/?number=250721018"
+              target="_blank"
+              class="certificate-link"
+            >
+              Verify Certificate
+            </a>
+          </div>
+          <div class="certificate-card">
+            <img
+              src="icons/route-logo.webp"
+              alt="Route Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">Flutter Development Diploma</p>
+            <a
+              href="https://drive.google.com/file/d/1UiNC6bDopft84HhSwGMFqlfyMtJLVVS7/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/maharatech.webp"
+              alt="Mahara Tech Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">
+              Introduction to Software Testing Concepts & Techniques Certificate
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1Z0cdPksKCu_CQYzBmMH_6nUxSy00Ap7T/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/maharatech.webp"
+              alt="Mahara Tech Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">
+              Effective Test Case and Bug Report Writing Techniques Certificate
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1RiUYozmW6kRVJx7V7fjWisNy_78LR14M/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/maharatech.webp"
+              alt="Mahara Tech Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">
+              Test Automation Guidelines with Selenium and TestNG Certificate
+            </p>
+            <a
+              href="https://drive.google.com/file/d/153A8SY0yA5QgtvkUN3K0uvgmbRQwVB6m/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/nezam.webp"
+              alt="Nezam Academy Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">
+              Java Programming - Test Automation Bootcamp Level 1
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1qLt5D2cyglZJaSQChqY8JAbGv-ptTvOb/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/nezam.webp"
+              alt="Nezam Academy Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">
+              Object Oriented Programming - Test Automation Bootcamp Level 2
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1nloGgFqdAxHEV8-a-C59N8P9buUZzJ5M/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/nezam.webp"
+              alt="Nezam Academy Logo"
+              class="certificate-logo"
+            />
+            <p class="certificate-title">
+              Selenium WebDriver with Java - Test Automation Bootcamp Level 3
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1Xg_zxgFilHjuql9WiTteoudcU4gvZyWo/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/udemy.svg"
+              alt="Udemy Logo"
+              class="certificate-logo"
+              style="padding: 8px"
+            />
+            <p class="certificate-title">
+              Introduction to Agile - Scrum and Kanban
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1AWymuBzHQx_4bdJ1brOVf2o6TuKS6FTp/view?usp=drive_link"
+              target="_blank"
+              class="certificate-link"
+              >View Certificate</a
+            >
+          </div>
+
+          <div class="certificate-card">
+            <img
+              src="icons/udemy.svg"
+              alt="Udemy Logo"
+              class="certificate-logo"
+              style="padding: 8px"
+            />
+            <p class="certificate-title">Data Warehouse - The Ultimate Guide</p>
+            <!-- <a href="https://drive.google.com/file/d/1AWymuBzHQx_4bdJ1brOVf2o6TuKS6FTp/view?usp=drive_link" target="_blank" class="certificate-link">View Certificate</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="activities-window">
+      <div class="window-header">
+        <span>Activities</span>
+        <button class="close-btn" onclick="closeWindow('activities')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+
+      <div class="window-content activities-content">
+        <div class="activity">
+          <img src="icons/ibm.svg" alt="IBM Logo" style="padding: 4px" />
+          <div class="activity-content">
+            <h3>Make Comfort Kits to Bring Joy and Support to Students</h3>
+            <p class="org"><b>IBM Volunteering</b></p>
+            <p class="date">Apr 27, 2026</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/ibm.svg" alt="IBM Logo" style="padding: 4px" />
+          <div class="activity-content">
+            <h3>Create Tactile Learning Cards</h3>
+            <p class="org"><b>IBM Volunteering</b></p>
+            <p class="date">Apr 22, 2026</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/ibm.svg" alt="IBM Logo" style="padding: 4px" />
+          <div class="activity-content">
+            <h3>
+              Pack and Decorate Hygiene Kits and Create Mental Health Toolkits
+            </h3>
+            <p class="org"><b>IBM Volunteering</b></p>
+            <p class="date">Apr 20, 2026</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/180daraga.webp" alt="180 Daraga Logo" />
+          <div class="activity-content">
+            <h3>Graphic Design Director</h3>
+            <p class="org"><b>180 Daraga</b></p>
+            <p class="date">Nov 2024 – Oct 2025</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/180daraga.webp" alt="180 Daraga Logo" />
+          <div class="activity-content">
+            <h3>Graphic Designer</h3>
+            <p class="org"><b>180 Daraga</b></p>
+            <p class="date">Jan 2023 – Jul 2025</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/180daraga.webp" alt="180 Daraga Logo" />
+          <div class="activity-content">
+            <h3>Flutter Assistant</h3>
+            <p class="org"><b>180 Daraga</b></p>
+            <p class="date">Sep 2024 – Oct 2024</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/180daraga.webp" alt="180 Daraga Logo" />
+          <div class="activity-content">
+            <h3>Vice Project Manager for New Stage 17</h3>
+            <p class="org"><b>180 Daraga</b></p>
+            <p class="date">Jul 2024 – Sep 2024</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <img src="icons/180daraga.webp" alt="180 Daraga Logo" />
+          <div class="activity-content">
+            <h3>Graphic Design Coordinator for New Stage 16</h3>
+            <p class="org"><b>180 Daraga</b></p>
+            <p class="date">Jul 2023 – Sep 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="contact-window">
+      <div class="window-header">
+        <span>Contact</span>
+        <button class="close-btn" onclick="closeWindow('contact')">
+          <img src="icons/close.webp" alt="Close" />
+        </button>
+      </div>
+      <div class="window-content contact-content">
+        <h5>Hi there!</h5>
+        <p>
+          <br />Feel free to reach out to me through any of the links below:
+        </p>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          <b>Email:</b>
+          <a href="mailto:noureensaad086@gmail.com">noureensaad086@gmail.com</a>
+        </p>
+
+        <p>
+          <i class="fa-brands fa-linkedin"></i>
+          <b>LinkedIn:</b>
+          <a
+            href="https://www.linkedin.com/in/noureen-saad-073239276/"
+            target="_blank"
+          >
+            linkedin.com/in/noureensaad
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
